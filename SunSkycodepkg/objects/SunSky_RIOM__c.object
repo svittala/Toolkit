@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>RIOM tracks risks, issues, opportunities</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Cause__c</fullName>
+        <description>Describe the cause of the risk, issue, or opportunity has on the project.</description>
+        <externalId>false</externalId>
+        <label>Cause</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Impact_Area__c</fullName>
+        <description>The impact the risk, issue, or opportunity can have on the project if not reviewed and resolved.</description>
+        <externalId>false</externalId>
+        <label>Impact Area</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Continuity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contractual Compliance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship -Current Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship -Future Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Impact_Factor__c</fullName>
+        <description>The level of the impact of the risk, issue, or opportunity to the project.</description>
+        <externalId>false</externalId>
+        <label>Impact Factor</label>
+        <picklist>
+            <controllingField>Impact_Area__c</controllingField>
+            <picklistValues>
+                <fullName>High</fullName>
+                <controllingFieldValues>Business Continuity</controllingFieldValues>
+                <controllingFieldValues>Contractual Compliance</controllingFieldValues>
+                <controllingFieldValues>Delivery</controllingFieldValues>
+                <controllingFieldValues>Financial</controllingFieldValues>
+                <controllingFieldValues>Relationship -Current Business</controllingFieldValues>
+                <controllingFieldValues>Relationship -Future Business</controllingFieldValues>
+                <controllingFieldValues>Schedule</controllingFieldValues>
+                <controllingFieldValues>Security</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <controllingFieldValues>Business Continuity</controllingFieldValues>
+                <controllingFieldValues>Contractual Compliance</controllingFieldValues>
+                <controllingFieldValues>Delivery</controllingFieldValues>
+                <controllingFieldValues>Financial</controllingFieldValues>
+                <controllingFieldValues>Relationship -Current Business</controllingFieldValues>
+                <controllingFieldValues>Relationship -Future Business</controllingFieldValues>
+                <controllingFieldValues>Schedule</controllingFieldValues>
+                <controllingFieldValues>Security</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <controllingFieldValues>Business Continuity</controllingFieldValues>
+                <controllingFieldValues>Contractual Compliance</controllingFieldValues>
+                <controllingFieldValues>Delivery</controllingFieldValues>
+                <controllingFieldValues>Financial</controllingFieldValues>
+                <controllingFieldValues>Relationship -Current Business</controllingFieldValues>
+                <controllingFieldValues>Relationship -Future Business</controllingFieldValues>
+                <controllingFieldValues>Schedule</controllingFieldValues>
+                <controllingFieldValues>Security</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <controllingFieldValues>Business Continuity</controllingFieldValues>
+                <controllingFieldValues>Contractual Compliance</controllingFieldValues>
+                <controllingFieldValues>Delivery</controllingFieldValues>
+                <controllingFieldValues>Financial</controllingFieldValues>
+                <controllingFieldValues>Relationship -Current Business</controllingFieldValues>
+                <controllingFieldValues>Relationship -Future Business</controllingFieldValues>
+                <controllingFieldValues>Schedule</controllingFieldValues>
+                <controllingFieldValues>Security</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <controllingFieldValues>Business Continuity</controllingFieldValues>
+                <controllingFieldValues>Contractual Compliance</controllingFieldValues>
+                <controllingFieldValues>Delivery</controllingFieldValues>
+                <controllingFieldValues>Financial</controllingFieldValues>
+                <controllingFieldValues>Relationship -Current Business</controllingFieldValues>
+                <controllingFieldValues>Relationship -Future Business</controllingFieldValues>
+                <controllingFieldValues>Schedule</controllingFieldValues>
+                <controllingFieldValues>Security</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Impact__c</fullName>
+        <description>Describe the impact the risk, issue, or opportunity has on the project.</description>
+        <externalId>false</externalId>
+        <label>Impact</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Detail__c</fullName>
+        <description>A description of the issue raised related to a project.</description>
+        <externalId>false</externalId>
+        <label>Issue Detail</label>
+        <length>20000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Issue_Status__c</fullName>
+        <description>Track the status of the issue related to the project.  Some issues may first be identified as a risk, and if not managed can become an issue.</description>
+        <externalId>false</externalId>
+        <label>Issue Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converted from risk</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as withdrawn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Occurred</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as avoided</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as resolved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Issue__c</fullName>
+        <description>An overview of the issue raised related to a project.</description>
+        <externalId>false</externalId>
+        <label>Issue</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Area__c</fullName>
+        <description>The impact the opportunity can have on the project or business.</description>
+        <externalId>false</externalId>
+        <label>Opportunity Area</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Improve Business-Revenue Expansion/Preservation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Improve Business-Innovation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Improve Business-Delighting the Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Improve Business-Efficiency</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Empowerment-Engaged Employees</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketplace- Public Perception/Brand Recognition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketplace- Business Partnership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketplace-Business Position</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketplace-Industry Position</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Factor__c</fullName>
+        <description>The level of impact the opportunity has to the project.</description>
+        <externalId>false</externalId>
+        <label>Opportunity Factor</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <description>An overview of the opportunity raised related to a project.</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Project_Reference__c</fullName>
+        <description>The project related to the risk, issue, or opportunity.</description>
+        <externalId>false</externalId>
+        <label>Project Reference</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RIOM_Type__c</fullName>
+        <description>Identify the RIOM type: Risk, Issue, or Opportunity.  Specific details will be captured for each type.</description>
+        <externalId>false</externalId>
+        <label>RIOM Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Risk</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RIO_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Contact to respond to questions about the risk, issue, or opportunity.</description>
+        <externalId>false</externalId>
+        <label>RIO Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>SunSky_RIOM</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reported_Date__c</fullName>
+        <description>The date the risk, issue, or opportunity was reported.</description>
+        <externalId>false</externalId>
+        <label>Reported Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Likelihood__c</fullName>
+        <description>The likelihood of the risk related to the project occurring.</description>
+        <externalId>false</externalId>
+        <label>Risk Likelihood</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Possible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Probable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Imminent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Status__c</fullName>
+        <description>Track the status of the risk related to the project. Some items may first be identified as a risk, and if not managed can become an issue.</description>
+        <externalId>false</externalId>
+        <label>Risk Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closes as withdrawn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as realized- no further action</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed- converted to issue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as avoided</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed as mitigated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Risk__c</fullName>
+        <description>An overview of the risk raised related to the project.</description>
+        <externalId>false</externalId>
+        <label>Risk</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Tool RIOM</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Reference__c</columns>
+        <columns>RIOM_Type__c</columns>
+        <columns>Cause__c</columns>
+        <columns>Impact__c</columns>
+        <columns>Issue__c</columns>
+        <columns>Risk__c</columns>
+        <columns>Risk_Likelihood__c</columns>
+        <columns>Impact_Area__c</columns>
+        <columns>Impact_Factor__c</columns>
+        <columns>Issue_Status__c</columns>
+        <columns>Risk_Status__c</columns>
+        <columns>RIO_Contact__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Reference__c</columns>
+        <columns>RIOM_Type__c</columns>
+        <columns>Cause__c</columns>
+        <columns>Impact__c</columns>
+        <columns>Impact_Area__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Opportunity_Area__c</columns>
+        <columns>Opportunity_Factor__c</columns>
+        <columns>Impact_Factor__c</columns>
+        <columns>RIO_Contact__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RIOM_Type__c</field>
+            <operation>equals</operation>
+            <value>Opportunity</value>
+        </filters>
+        <label>All Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Reference__c</columns>
+        <columns>RIOM_Type__c</columns>
+        <columns>Cause__c</columns>
+        <columns>Impact__c</columns>
+        <columns>Issue__c</columns>
+        <columns>Impact_Area__c</columns>
+        <columns>Impact_Factor__c</columns>
+        <columns>Issue_Status__c</columns>
+        <columns>RIO_Contact__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RIOM_Type__c</field>
+            <operation>equals</operation>
+            <value>Issue</value>
+        </filters>
+        <label>All Issues</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Risks</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Reference__c</columns>
+        <columns>RIOM_Type__c</columns>
+        <columns>Cause__c</columns>
+        <columns>Impact__c</columns>
+        <columns>Risk__c</columns>
+        <columns>Risk_Likelihood__c</columns>
+        <columns>Impact_Area__c</columns>
+        <columns>Impact_Factor__c</columns>
+        <columns>Risk_Status__c</columns>
+        <columns>RIO_Contact__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RIOM_Type__c</field>
+            <operation>equals</operation>
+            <value>Risk</value>
+        </filters>
+        <label>All Risks</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RIOM-{000000}</displayFormat>
+        <label>SunSky RIOM Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Tool RIOM</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Cause__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Issue__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Risk__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Impact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Reported_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RIOM_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Cause__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Issue__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Risk__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Impact__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>RIOM_Type__c</searchFilterFields>
+        <searchFilterFields>Cause__c</searchFilterFields>
+        <searchFilterFields>Issue__c</searchFilterFields>
+        <searchFilterFields>Risk__c</searchFilterFields>
+        <searchFilterFields>Impact__c</searchFilterFields>
+        <searchFilterFields>Reported_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>RIOM_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Reference__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Cause__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Impact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Issue__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Risk__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>ReqRIOMFields</fullName>
+        <active>true</active>
+        <description>Enforces completion of related fields based on RIOM type.</description>
+        <errorConditionFormula>OR(
+AND
+(ISPICKVAL(RIOM_Type__c,&quot;Risk&quot;),
+OR(ISBLANK (TEXT (Risk_Likelihood__c)), 
+ISBLANK (TEXT (Risk_Status__c)))),
+AND (
+ISPICKVAL (RIOM_Type__c, &quot;Issue&quot;), 
+OR(ISBLANK (Issue_Detail__c), 
+ISBLANK (TEXT (Issue_Status__c)))),
+AND (
+ISPICKVAL (RIOM_Type__c, &quot;Opportunity&quot;), 
+OR(ISBLANK (TEXT (Opportunity_Area__c)), 
+ISBLANK (TEXT (Opportunity_Factor__c)))),
+AND (
+ISPICKVAL(RIOM_Type__c,&quot;Risk&quot;),
+OR(NOT (ISBLANK (Issue_Detail__c)), 
+NOT (ISBLANK (TEXT (Issue_Status__c))),
+NOT(ISBLANK (TEXT (Opportunity_Area__c))), 
+NOT(ISBLANK (TEXT (Opportunity_Factor__c))))),
+AND (
+ISPICKVAL(RIOM_Type__c,&quot;Issue&quot;),
+OR(NOT (ISBLANK (TEXT(Risk_Likelihood__c))), 
+NOT (ISBLANK (TEXT (Risk_Status__c))),
+NOT(ISBLANK (TEXT (Opportunity_Area__c))), 
+NOT(ISBLANK (TEXT (Opportunity_Factor__c))))),
+AND (
+ISPICKVAL(RIOM_Type__c,&quot;Opportunity&quot;),
+OR(NOT (ISBLANK (TEXT(Risk_Likelihood__c))), 
+NOT (ISBLANK (TEXT (Risk_Status__c))),
+NOT(ISBLANK (Issue_Detail__c)), 
+NOT(ISBLANK (TEXT (Issue_Status__c))))))</errorConditionFormula>
+        <errorMessage>*Complete the related RIOM fields for the RIOM Type selected*
+  RISK requires Risk Likelihood and Risk Status
+   ISSUE requires Issue Detail and Issue Status
+   OPPORTUNITY requires Opportunity Area and Opportunity Factor</errorMessage>
+    </validationRules>
+</CustomObject>

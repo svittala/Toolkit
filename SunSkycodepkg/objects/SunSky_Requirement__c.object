@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Requirements are used to track customer requirements as part of a SFDC initiative.  Requirements may have multiple build components associated with them.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CoveredInDesign__c</fullName>
+        <description>Indicate if the requirement is covered in the solution design.</description>
+        <externalId>false</externalId>
+        <label>Covered In Design</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>To Be Determined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Design_Doc_Mapping_Reference__c</fullName>
+        <description>The section within the design document that refers to this requirement.</description>
+        <externalId>false</externalId>
+        <label>Design Doc Mapping Reference</label>
+        <length>10000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Functional_Type__c</fullName>
+        <description>The functional area related to this requirement: user, business, data, workflow, integration, etc.</description>
+        <externalId>false</externalId>
+        <label>Functional Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Business Requirement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Entity Relationships</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Functional Requirement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functional Requirement</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>User Requirement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regional/ Globalization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Level_of_Effort__c</fullName>
+        <description>The level of effort required to build the solution for the requirement.</description>
+        <externalId>false</externalId>
+        <label>Level of Effort</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <description>The project related to the requirement.</description>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Raised_By_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The person who identified the requirement.</description>
+        <externalId>false</externalId>
+        <label>Raised By Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>SunSky_Requirements</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Raised_On_Date__c</fullName>
+        <description>The date the requirement was identified.</description>
+        <externalId>false</externalId>
+        <label>Raised On Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Requirement_Comments__c</fullName>
+        <description>Comments raised related to the requirement.</description>
+        <externalId>false</externalId>
+        <label>Requirement Comments</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Requirement_Description__c</fullName>
+        <description>A detailed description of the requirement.</description>
+        <externalId>false</externalId>
+        <label>Requirement Description</label>
+        <length>20000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Requirement_Priority__c</fullName>
+        <description>Rate the requirement against the other requirements identified.  This rating will help to group requirements into build phases and release management, as well as if identified as out of scope, to drive change order management.</description>
+        <externalId>false</externalId>
+        <label>Requirement Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Requirement_Questions__c</fullName>
+        <description>Questions raised related to the requirement.</description>
+        <externalId>false</externalId>
+        <label>Requirement Questions</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Requirement_Status__c</fullName>
+        <description>The status of the requirement: new, reviewed, approved, completed, etc.</description>
+        <externalId>false</externalId>
+        <label>Requirement Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reviewed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Scope__c</fullName>
+        <description>Indicate if the requirement is considered in scope or out-of-scope.</description>
+        <externalId>false</externalId>
+        <label>Scope</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Scope (As-Is)</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Out-of-Scope (deferred)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-Scope (Manual)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-Scope (Automated)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deleted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Solution_Type__c</fullName>
+        <description>The type of solution to satisfy the requirement: out of the box, custom development, third party app, etc.</description>
+        <externalId>false</externalId>
+        <label>Solution Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Out of the Box</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner-Vendor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Third Party App</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Build_Component__c</fullName>
+        <description>The number of build components related to the requirement.</description>
+        <externalId>false</externalId>
+        <label>Total Build Component</label>
+        <summaryForeignKey>SunSky_Build_Component__c.SunSky_Requirement__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Est_Hours_Functional__c</fullName>
+        <description>The total estimated functional hours required of the build component(s) required to satisfy the requirement.</description>
+        <externalId>false</externalId>
+        <label>Total Est Hours-Functional</label>
+        <summarizedField>SunSky_Build_Component__c.Est_Hours_Functional__c</summarizedField>
+        <summaryForeignKey>SunSky_Build_Component__c.SunSky_Requirement__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Est_Hours_Technical__c</fullName>
+        <description>The total estimated technical hours required of the build component(s) required to satisfy the requirement.</description>
+        <externalId>false</externalId>
+        <label>Total Est Hours- Technical</label>
+        <summarizedField>SunSky_Build_Component__c.Est_Hours_Technical__c</summarizedField>
+        <summaryForeignKey>SunSky_Build_Component__c.SunSky_Requirement__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Test_Case__c</fullName>
+        <description>The total number of test cases related to the requirement.</description>
+        <externalId>false</externalId>
+        <label>Total Test Case</label>
+        <summaryForeignKey>SunSky_Test_Case__c.SunSky_Requirement_Test_Case__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Tool Requirement</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Project__c</columns>
+        <columns>NAME</columns>
+        <columns>Functional_Type__c</columns>
+        <columns>Requirement_Description__c</columns>
+        <columns>Requirement_Status__c</columns>
+        <columns>Solution_Type__c</columns>
+        <columns>Requirement_Priority__c</columns>
+        <columns>Scope__c</columns>
+        <columns>Total_Build_Component__c</columns>
+        <columns>Level_of_Effort__c</columns>
+        <columns>Raised_By_Contact__c</columns>
+        <columns>Raised_On_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>REQ-{000000}</displayFormat>
+        <label>Requirement Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Tool Requirements</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Project__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Requirement_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Requirement_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Requirement_Priority__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Solution_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Functional_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Scope__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Project__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Requirement_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Requirement_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Requirement_Priority__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Functional_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Solution_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Scope__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Requirement_Description__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Functional_Type__c</searchFilterFields>
+        <searchFilterFields>Solution_Type__c</searchFilterFields>
+        <searchFilterFields>Requirement_Priority__c</searchFilterFields>
+        <searchFilterFields>Requirement_Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>Project__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Requirement_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Requirement_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Functional_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Solution_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Requirement_Priority__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Scope__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>
